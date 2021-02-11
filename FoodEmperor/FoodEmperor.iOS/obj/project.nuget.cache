@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "DhT5b34020b99cWYXT3K2CMEo0ItpQx0h1rU+fTUMnI/3+lEaqX4atQN2T14VU0Gz94uql4yS8OJeU4rlvxtAg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\user\\source\\repos\\FoodEmperor\\FoodEmperor\\FoodEmperor.iOS\\FoodEmperor.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.2.10\\microsoft.netcore.universalwindowsplatform.6.2.10.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.licensing\\18.1.0.55\\syncfusion.licensing.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.55\\syncfusion.xamarin.core.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\18.1.0.55\\syncfusion.xamarin.gridcommon.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\18.1.0.55\\syncfusion.xamarin.sfcombobox.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.sfdatagrid\\18.1.0.55\\syncfusion.xamarin.sfdatagrid.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\syncfusion.xamarin.sfnumerictextbox\\18.1.0.55\\syncfusion.xamarin.sfnumerictextbox.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\xamarin.forms\\4.6.0.847\\xamarin.forms.4.6.0.847.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
+             x:Class="FoodEmperor.Views.AccountDetailsPage">
+
+    <Grid Padding="30" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Start">
+            <Label Text="FOOD" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
+            <Label Text="EMPEROR" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+            <Label Text="PIZZA" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+            <Image Source="user.png" Margin="0,7,0,0" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+            <Label Text="TWOJE DANE" Margin="0,7,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="18" HorizontalOptions="Center"/>
+        </StackLayout>
+        <Grid Grid.Row="1" Padding="0,10" HorizontalOptions="End" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="5"  HorizontalOptions="Start" VerticalOptions="CenterAndExpand">
+                <Label Text="IMIĘ" WidthRequest="150" HeightRequest="20" TextColor="White" Opacity="0.5" HorizontalOptions="End" FontFamily="LightFont"/>
+                <Label Text="AREK DOMINIK" TextColor="#F9B522" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="#161616" WidthRequest="450" HeightRequest="80" FontFamily="ThemeFont" FontSize="20" HorizontalOptions="End"/>
+                <Label Text="NAZWISKO" WidthRequest="150" TextColor="White" Opacity="0.5" HorizontalOptions="End" FontFamily="LightFont"/>
+                <Label Text="RUSZEL BIEDRZYCKI" TextColor="#F9B522" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="#161616" WidthRequest="450" HeightRequest="80" FontFamily="ThemeFont" FontSize="20" HorizontalOptions="End"/>
+                <Label Text="ADRES ZAMIESZKANIA" WidthRequest="150" HeightRequest="20" TextColor="White" Opacity="0.5" HorizontalOptions="End" FontFamily="LightFont"/>
+                <Label Text="UNIWERSYTECKA 11/3 GDAŃSK" TextColor="#F9B522" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="#161616" WidthRequest="450" HeightRequest="80" FontFamily="ThemeFont" FontSize="20" HorizontalOptions="End"/>
+                <Label Text="ADRES EMAIL" WidthRequest="150" HeightRequest="20" TextColor="White" Opacity="0.5" HorizontalOptions="End" FontFamily="LightFont"/>
+                <Label Text="A.RUSZEL@HOTMAIL.COM, BIEDRON2121@GMAIL.COM" TextColor="#F9B522" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="#161616" WidthRequest="450" HeightRequest="80" FontFamily="ThemeFont" FontSize="15" HorizontalOptions="End"/>
+
+                <Label Text="OSTATNIE ZAMÓWIENIA" Margin="0,27,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="18" HorizontalOptions="Center"/>
+                <Label Text="1x SALAMI  25CM  22ZŁ" Margin="0,12,0,0" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="Black" WidthRequest="450" HeightRequest="40" FontFamily="ThemeFont" FontSize="30" HorizontalOptions="End"/>
+                <Label Text="1x HAWAI 35CM  25ZŁ" Margin="0,12,0,0" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="Black" WidthRequest="450" HeightRequest="40" FontFamily="ThemeFont" FontSize="30" HorizontalOptions="End"/>
+                <Label Text="2x COCA COLA  0.5L  10ZŁ" Margin="0,12,0,0" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" BackgroundColor="Black" WidthRequest="450" HeightRequest="40" FontFamily="ThemeFont" FontSize="30" HorizontalOptions="End"/>
+                
+                <Label Text="TWOJE RABATY" Margin="0,227,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="18" HorizontalOptions="Center"/>
+                <Label Text="2ZŁ" TextColor="White" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" BackgroundColor="#161616" WidthRequest="450" HeightRequest="80" FontFamily="ThemeFont" FontSize="20" HorizontalOptions="End"/>
+
+            </StackLayout>
+            <StackLayout Grid.Row="5" Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <BoxView BackgroundColor="White" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

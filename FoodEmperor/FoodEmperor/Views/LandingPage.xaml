@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:FoodEmperor.ViewModel"
+             x:Class="FoodEmperor.Views.LandingPage"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <vm:LandingViewModel />
+    </ContentPage.BindingContext>
+    <Grid Padding="30" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="10" HorizontalOptions="Start" VerticalOptions="Center">
+                <ImageButton Source="search.png" Clicked="Go_to_SearchPage" Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="user.png"  Clicked="Go_to_AccountPage" Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="cart.png"  Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="phone.png" Clicked="Go_to_ContactPage" Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+            </StackLayout>
+            <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="FOOD" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
+                <Label Text="EMPEROR" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+                <Label Text="PIZZA" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+                <ImageButton Source="menu.JPG" Clicked="Go_to_Menu_page" Margin="0,10,0,0" Aspect="AspectFit" WidthRequest="80" HeightRequest="80"/>
+                <Label Text="EDYTOR PIZZY" Margin="0,1,0,0" TextColor="White" Opacity="0.5" FontFamily="ThemeFont" FontSize="14" HorizontalOptions="Center"/>
+                <ImageButton Source="menu.JPG" Clicked="Go_to_MenuShow_page" Margin="0,10,0,0" Aspect="AspectFit" WidthRequest="80" HeightRequest="80"/>
+                <Label Text="MENU" Margin="0,5,0,0" TextColor="White" Opacity="0.5" FontFamily="ThemeFont" FontSize="14" HorizontalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+        <CollectionView x:Name="pizzaList" Margin="0,40,0,0" Grid.Row="1" ItemsSource="{Binding Pizzas}" SelectionMode="Single" SelectedItem="{Binding SelectedPizza}"
+                        VerticalScrollBarVisibility="Never" SelectionChangedCommand="{Binding SelectionCommand}">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" VerticalItemSpacing="20" HorizontalItemSpacing="20" Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" BackgroundColor="Black" WidthRequest="170" HeightRequest="200">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Image Aspect="AspectFill" Source="{Binding Image}" Margin="10" WidthRequest="160" HeightRequest="185" 
+                               HorizontalOptions="Center" VerticalOptions="Center"/>
+                        <Label Grid.Row="1" Text="{Binding Name}" TextColor="#F9B522" FontSize="18" FontFamily="Roboto" 
+                               VerticalOptions="End" HorizontalOptions="Start"/>
+                        <Label Grid.Row="1" Text="{Binding Price, StringFormat=' {0} zł'}" TextColor="White" FontSize="16" FontFamily="Roboto"
+                               VerticalOptions="End" HorizontalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <StackLayout Grid.Row="2" Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="Center">
+            <Button FontAttributes="Bold" Clicked="Go_to_PromotionsPage" Text="AKTUALNE PROMOCJE" TextColor="Black" HeightRequest="35" CornerRadius="17" BackgroundColor="#F9B522" FontFamily="ThemeFont" HorizontalOptions="Center"/>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+            <BoxView BackgroundColor="White" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+    </Grid>
+</ContentPage>

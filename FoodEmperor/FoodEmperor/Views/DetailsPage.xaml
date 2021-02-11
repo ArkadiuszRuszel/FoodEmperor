@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False"
+             x:Class="FoodEmperor.Views.DetailsPage">
+
+    <Grid Padding="30" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="20" HorizontalOptions="Start" VerticalOptions="Center">
+                <ImageButton Source="search.png" Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="user.png"  Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="cart.png"  Aspect="AspectFit" WidthRequest="20" HeightRequest="20"/>
+                <ImageButton Source="phone.png"  Aspect="AspectFit" WidthRequest="30" HeightRequest="30"/>
+            </StackLayout>
+            <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Start">
+                <Label Text="FOOD" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
+                <Label Text="EMPEROR" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+                <Label Text="PIZZA" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+                <ImageButton Source="menu.JPG"  Margin="0,7,0,0" Aspect="AspectFit" WidthRequest="80" HeightRequest="80"/>
+            </StackLayout>
+        </Grid>
+        <ScrollView Grid.Row="1" HorizontalOptions="FillAndExpand">
+            <Grid RowSpacing="50" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <CarouselView Grid.Row="1" ItemsSource="{Binding Pizzas}" HeightRequest="260" HorizontalOptions="FillAndExpand" 
+                          CurrentItem="{Binding SelectedPizza}" IsScrollAnimated="True" IsSwipeEnabled="True">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Name}" TextColor="#F9B522" FontSize="38" FontFamily="ThemeFont" 
+                                       HorizontalOptions="Center"/>
+                                <Image Source="{Binding Image}" Aspect="Fill" Margin="0,-50,0,0" HeightRequest="222" 
+                                       WidthRequest="222" HorizontalOptions="Center" VerticalOptions="End"/>
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <ImageButton Grid.Row="1" Source="left.png" Margin="15,50,0,0" Aspect="Fill" HeightRequest="30" WidthRequest="30" HorizontalOptions="Start" 
+                         VerticalOptions="Center" BackgroundColor="Transparent" Command="{Binding ChangePositionCommand}" CommandParameter="L"/>
+                <ImageButton Grid.Row="1" Source="right.png" Margin="0,50,15,0" Aspect="Fill" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" 
+                         VerticalOptions="Center" BackgroundColor="Transparent" Command="{Binding ChangePositionCommand}" CommandParameter="R"/>
+                <StackLayout Grid.Row="2" Spacing="20" HorizontalOptions="FillAndExpand">
+                    <!--<Label Text="{Binding SelectedPizza.Name, StringFormat='EMPEROR {0} PIZZA'}" TextColor="#F9B522" 
+                           FontFamily="ThemeFont" FontSize="25" HorizontalOptions="End"/>-->
+                    <BoxView BackgroundColor="#F9B522" HeightRequest="2" WidthRequest="45" VerticalOptions="Start" HorizontalOptions="End"/>
+                    <Label Text="{Binding SelectedPizza.Description}" TextColor="White" WidthRequest="250" FontFamily="LightFont" FontSize="12" HorizontalOptions="Fill" HorizontalTextAlignment="Start"/>
+                    <Label Text="{Binding SelectedPizza.Ingredients}" TextColor="#F9B522" WidthRequest="250" FontFamily="LightFont" FontSize="14" HorizontalOptions="Fill" HorizontalTextAlignment="Start"/>
+                    <Label Text="{Binding SelectedPizza.Price, StringFormat='Cena {0} zł'}" TextColor="White" FontFamily="ThemeFont" FontSize="20" HorizontalOptions="End"/>
+                    <Button FontAttributes="Bold" Text="DODAJ DO KOSZYKA" TextColor="Black" HeightRequest="35" CornerRadius="17" BackgroundColor="#F9B522" FontFamily="ThemeFont" HorizontalOptions="End"/>
+                    <BoxView BackgroundColor="White" HeightRequest="2" WidthRequest="500" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </Grid>
+</ContentPage>

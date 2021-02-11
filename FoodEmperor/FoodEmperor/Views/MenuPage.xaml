@@ -1,0 +1,54 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:FoodEmperor.ViewModel"
+             xmlns:a="clr-namespace:FoodEmperor.ViewModel"
+             x:Class="FoodEmperor.Views.MenuPage"
+             mc:Ignorable="d" NavigationPage.HasNavigationBar="False">
+
+  <!--  <ContentPage.BindingContext>
+        <vm:MenuViewModel />
+    </ContentPage.BindingContext> -->
+
+
+    <Grid Padding="30" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Spacing="0" HorizontalOptions="Center" VerticalOptions="Start">
+            <Label Text="FOOD" TextColor="White" FontFamily="ThemeFont" FontSize="50" HorizontalOptions="Center"/>
+            <Label Text="EMPEROR" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+            <Label Text="PIZZA" Margin="0,-5,0,0" TextColor="White" Opacity="0.5" FontFamily="LightFont" FontSize="25" HorizontalOptions="Center"/>
+        </StackLayout>
+        <Grid Grid.Row="1" Padding="0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout Spacing="20"  HorizontalOptions="Start" VerticalOptions="CenterAndExpand">
+                <Label Text="ID" WidthRequest="20" HeightRequest="20" FontAttributes="Bold" TextColor="#F9B522"/>
+                <Entry Placeholder="identyfikator" x:Name="ID" Keyboard="Numeric" TextColor="#F9B522" WidthRequest="250" HeightRequest="40" FontFamily="ThemeFont" FontSize="15" HorizontalOptions="Center">
+                    <Entry.Behaviors>
+                        <a:NumericValidationBehavior/>
+                    </Entry.Behaviors>
+                 </Entry>
+                <Label Text="Nazwa pizzy" FontAttributes="Bold" WidthRequest="250" HeightRequest="20" TextColor="#F9B522"/>
+                <Entry Placeholder="podaj nazwę pizzy" x:Name="Nazwa" TextColor="Black" WidthRequest="250" HeightRequest="40" FontFamily="ThemeFont" FontSize="15" HorizontalOptions="Center"/>
+                <Label Text="Cena małej pizzy" FontAttributes="Bold" WidthRequest="250" TextColor="#F9B522"/>
+                <Entry Placeholder="ustaw cenę małej" x:Name="CenaS" TextColor="Black" WidthRequest="250" HeightRequest="40" FontFamily="ThemeFont" FontSize="15" HorizontalOptions="Center"/>
+                <Label Text="Cena średniej pizzy" FontAttributes="Bold" WidthRequest="250" HeightRequest="20" TextColor="#F9B522"/>
+                <Entry Placeholder="ustaw cenę średniej" x:Name="CenaM" TextColor="Black" WidthRequest="250" HeightRequest="40" FontFamily="ThemeFont" FontSize="15" HorizontalOptions="Center"/>
+                <Label Text="Cena dużej pizzy" FontAttributes="Bold" WidthRequest="250" HeightRequest="20" TextColor="#F9B522"/>
+                <Entry Placeholder="ustaw cenę dużej" x:Name="CenaL" TextColor="Black" WidthRequest="250" HeightRequest="40" FontFamily="ThemeFont" FontSize="15" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Spacing="20" HorizontalOptions="End" VerticalOptions="Center">
+                <Button Text="Dodaj" Clicked="Button_Clicked_Create" TextColor="Black" FontAttributes="Bold" BackgroundColor="#F9B522" WidthRequest="80" HeightRequest="80" />
+                <Button Text="Zmień" Clicked="Button_Clicked_Update" TextColor="Black" FontAttributes="Bold" BackgroundColor="#F9B522" WidthRequest="80" HeightRequest="80" />
+                <Button Text="Usuń" Clicked="Button_Clicked_Delete" TextColor="Black" FontAttributes="Bold" BackgroundColor="#F9B522" WidthRequest="80" HeightRequest="80" />
+                <ImageButton Source="menu.JPG" Clicked="Go_to_MenuShow_page" Margin="0,7,0,0" Aspect="AspectFit" WidthRequest="80" HeightRequest="80"/>
+                <Label Text="MENU" Margin="0,-10,0,0" TextColor="White" Opacity="0.5" FontFamily="ThemeFont" FontSize="14" HorizontalOptions="Center"/>
+            </StackLayout>
+            <StackLayout Grid.Row="5" Orientation="Horizontal" VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                <BoxView BackgroundColor="White" HeightRequest="2" VerticalOptions="Start" HorizontalOptions="FillAndExpand" />
+            </StackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

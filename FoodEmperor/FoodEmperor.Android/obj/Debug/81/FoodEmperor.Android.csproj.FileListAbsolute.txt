@@ -1,0 +1,5 @@
+C:\Users\Dominik\source\repos\FoodEmperor\FoodEmperor\FoodEmperor.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\Dominik\source\repos\FoodEmperor\FoodEmperor\FoodEmperor.Android\obj\Debug\81\FoodEmperor.Android.nuget.stamp
+C:\Users\user\source\repos\FoodEmperor2\FoodEmperor\FoodEmperor.Android\obj\Debug\81\MonoAndroid,Version=v8.1.AssemblyAttributes.cs
+C:\Users\user\source\repos\FoodEmperor2\FoodEmperor\FoodEmperor.Android\obj\Debug\81\build.props
+C:\Users\user\source\repos\FoodEmperor2\FoodEmperor\FoodEmperor.Android\obj\Debug\81\adb.props
